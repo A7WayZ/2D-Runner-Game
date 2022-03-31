@@ -38,7 +38,7 @@ public class PlayerScript : MonoBehaviour
         if (isAlive)
         {
             score += Time.deltaTime * 4;
-            ScoreTxt.text = "Score: " + score.ToString("F");
+            ScoreTxt.text = "Score: " + score.ToString("F1");
         }
 
     }
