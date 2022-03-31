@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour
     Rigidbody2D RB;
 
     public Text ScoreTxt;
+    public Animator PlayerAnimator;
 
     private void Awake()
     {
@@ -26,14 +27,23 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            PlayerAnimator.SetBool("IsJumping", true);
+
             if (isGrounded == true)
             {
                 RB.AddForce(Vector2.up * JumpForce);
                 isGrounded = false;
+                PlayerAnimator.SetBool("IsJumping", false);
             }
+
+
         }
+
+     
+
+
 
         if (isAlive)
         {
