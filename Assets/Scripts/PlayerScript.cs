@@ -35,16 +35,36 @@ public class PlayerScript : MonoBehaviour
             {
                 RB.AddForce(Vector2.up * JumpForce);
                 isGrounded = false;
+            
             }
 
+            PlayerAnimator.SetBool("IsJumping", true);
+
         }
+        else
+        {
+            PlayerAnimator.SetBool("IsJumping", false);
+
+        }
+
+
+
+
+
 
         if (Input.GetKeyDown(KeyCode.DownArrow) && isGrounded == true)
         {
-            PlayerAnimator.SetBool("IsSliding", true);
-      
-        }
+
+
             
+            PlayerAnimator.SetBool("IsSliding", true);
+        
+        } else
+        {
+            PlayerAnimator.SetBool("IsSliding", false);
+
+        }
+
 
 
 
