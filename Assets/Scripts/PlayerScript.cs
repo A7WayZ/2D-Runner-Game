@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
 
     public float JumpForce;
+    public float SlideForce;
     float score;
 
     [SerializeField]
@@ -29,19 +30,21 @@ public class PlayerScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            PlayerAnimator.SetBool("IsJumping", true);
 
             if (isGrounded == true)
             {
                 RB.AddForce(Vector2.up * JumpForce);
                 isGrounded = false;
-                PlayerAnimator.SetBool("IsJumping", false);
             }
-
 
         }
 
-     
+        if (Input.GetKeyDown(KeyCode.DownArrow) && isGrounded == true)
+        {
+            PlayerAnimator.SetBool("IsSliding", true);
+      
+        }
+            
 
 
 
@@ -57,10 +60,10 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ground"))
         {
-            if(isGrounded == false)
-            {
+            
+        
                 isGrounded = true;
-            }
+            
         }
 
 
