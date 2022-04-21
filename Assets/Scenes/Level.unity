@@ -2533,6 +2533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JumpForce: 800
   SlideForce: 0
+  Speed: 0
   isGrounded: 1
   ScoreTxt: {fileID: 275987264}
   PlayerAnimator: {fileID: 1367695040}

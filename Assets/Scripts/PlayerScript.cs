@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
 
     public float JumpForce;
     public float SlideForce;
+    public float Speed;
     float score;
 
     [SerializeField]
@@ -28,6 +29,11 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
+
+
+
+        // Jumping 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
 
@@ -47,25 +53,19 @@ public class PlayerScript : MonoBehaviour
 
         }
 
-
-
-
-
-
+        //Running 
         if (Input.GetKeyDown(KeyCode.DownArrow) && isGrounded == true)
         {
 
-
-            
             PlayerAnimator.SetBool("IsSliding", true);
         
         } else
         {
             PlayerAnimator.SetBool("IsSliding", false);
-
         }
 
 
+        //Walking
 
 
         if (isAlive)
