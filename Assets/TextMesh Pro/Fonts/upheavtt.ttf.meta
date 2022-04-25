@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 32b6652b729402d4288ad91a890eddfa
+guid: 4ec00ed9f37e8ca4eb5e06d135198f0e
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Tiki Tako
+  - Upheaval TT (BRK)
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
