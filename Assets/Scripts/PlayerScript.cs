@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviour
     public float JumpForce;
     public float SlideForce;
     public float Speed;
-    float score;
+    
 
     [SerializeField]
     bool isGrounded = false;
@@ -22,7 +22,7 @@ public class PlayerScript : MonoBehaviour
     private void Awake()
     {
         RB = GetComponent<Rigidbody2D>();
-        score = 0;
+       
     }
 
 
@@ -68,11 +68,7 @@ public class PlayerScript : MonoBehaviour
         //Walking
 
 
-        if (isAlive)
-        {
-            score += Time.deltaTime * 4;
-            ScoreTxt.text = "Score: " + score.ToString("F1");
-        }
+        
 
     }
 
