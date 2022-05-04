@@ -8,7 +8,8 @@ public class PlayerScript : MonoBehaviour
     public float JumpForce;
     public float SlideForce;
     public float Speed;
-    
+    public TimeManager TM;
+
 
     [SerializeField]
     bool isGrounded = false;
@@ -30,11 +31,11 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
       
-
+        
 
 
         // Jumping 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
 
             if (isGrounded == true)
@@ -53,8 +54,8 @@ public class PlayerScript : MonoBehaviour
 
         }
 
-        //Running 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && isGrounded == true)
+        //sliding
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S) && isGrounded == true)
         {
 
             PlayerAnimator.SetBool("IsSliding", true);
@@ -65,10 +66,17 @@ public class PlayerScript : MonoBehaviour
         }
 
 
-        //Walking
+
+
+
 
 
         
+
+
+        
+
+
 
     }
 
