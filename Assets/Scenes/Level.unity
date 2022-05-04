@@ -1259,7 +1259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &604577224
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1449,11 +1449,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1803997526, guid: 15980b4910ca440f0b9ab1202a85063d, type: 3}
       propertyPath: m_Size.y
-      value: 1.19922
+      value: 1.0729978
       objectReference: {fileID: 0}
     - target: {fileID: 1803997526, guid: 15980b4910ca440f0b9ab1202a85063d, type: 3}
       propertyPath: m_Offset.y
-      value: 0.09961015
+      value: 0.03649926
       objectReference: {fileID: 0}
     - target: {fileID: 3312057159174202408, guid: 15980b4910ca440f0b9ab1202a85063d, type: 3}
       propertyPath: m_Color.b
